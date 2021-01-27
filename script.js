@@ -101,7 +101,15 @@ function quizStop(){
 
 
 
-// function nextQuestion(){
-// if(theQuestions.length === 0 || )
 
-// }
+
+//addevent listener for CLICKS 
+
+//check by using  if data number = answer add  
+    //else subtract points
+
+//NEXT QUESTIONM
+
+//localstorage save high score
+
+
