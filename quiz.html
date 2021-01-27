@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Easy Peasy Code Quiz</title>
     <link rel="stylesheet" href="./style.css">
-
+    <link rel="stylesheet" href="./2nd.css">
 </head>
 
 
@@ -14,28 +14,27 @@
 
 <body>
     <div class = "container">
-        <div id="timer">
             <div class="questionBox">
-                <p id="progressText" class="hud-prefix">
+                <p id="qText" class="hud">
                     Question
                 </p>
-            <div class="scoreBoard">
-                <p class="hud-prefix">
-                    Score
-                </p>
-                <h1 class="hud-main-text" id="score">
-                    0
-                </h1>
-            </div>
-            <div class="hud-item">
-                <p class="hud-prefix">
-                    Time
-                </p>
-                <h2 class="hud-main-text" id="score">
-                    15
-                </h2>
+                <div class="scoreBoard">
+                    <p class="hud-prefix">
+                        Score
+                    </p>
+                    <h1 class="currentScore" id="hud">
+                        0
+                    </h1>
                 </div>
-            </div>
+                <div class="timer">
+                    <p class="set-interval">
+                        Time
+                    </p>
+                    <h2 class="currentTime" id="timeClicking">
+                        15
+                    </h2>
+                </div>
+             </div>
 
             <div id ="question">What's the answer?</div>
 
@@ -84,14 +83,6 @@
 
 
 
-    <!-- nextButton -->
-    <div class="card-next" style="width: 30rem;">
-        <button id="next-button" class="next-btn">Next</button>
-    </div>
-
-
-
-    <script src="script.js"></script>
 </body>
 
 

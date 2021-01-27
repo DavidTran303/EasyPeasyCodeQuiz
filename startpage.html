@@ -8,22 +8,37 @@
 </head>
 
 <body>
-    <h1>Easy Peasy Code Start Page</h1>
 
-    <div class="container">
+    <h1>Easy Peasy Code Quiz</h1>
+
+    <div class="high-scores">
+        <h2 id="score-title" class="score-title"></h2>
+        <div class="score-list" id="score-list"></div>
+    </div>  
+
+    <div class="container start-btn">
         <button id="start-btn" class="btn">Start</button>
-        <button id="score-btn"   class="btn">High Score</button>
     </div>
-
-
-
-
-
-
-
-
-
-
+    
+    <div class="quiz-container" id="quiz-container"> 
+        <h1 id="question-number"></h1>
+        <h3 id="current-question"></h3>
+        <br>
+        <div id="timer"></div>
+        <div id="choices">
+            <button id="choices choice-a"></button>
+            <br>
+            <button id="choices choice-b"></button>
+            <br>
+            <button id="choices choice-c"></button>
+            <br>
+            <button id="choices choice-d"></button>
+            <br>
+        </div>
+        <div id="score"></div>
+    </div>
+    
+<script src="script.js"></script>
 </body>
 </html>
 
