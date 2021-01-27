@@ -11,13 +11,15 @@
 
     <h1>Easy Peasy Code Quiz</h1>
 
-    <div class="high-scores">
-        <h2 id="score-title" class="score-title"></h2>
-        <div class="score-list" id="score-list"></div>
-    </div>  
+    <div class="start-quiz" id="start-quiz">
+        <div class="high-scores">
+            <h2 id="score-title" class="score-title"></h2>
+            <div class="score-list" id="score-list"></div>
+        </div>  
 
-    <div class="container start-btn">
-        <button id="start-btn" class="btn">Start</button>
+        <div class="container start-btn">
+            <button id="start-btn" class="btn start-btn" onclick="startGame()">Start</button>
+        </div>
     </div>
     
     <div class="quiz-container" id="quiz-container"> 
@@ -26,13 +28,13 @@
         <br>
         <div id="timer"></div>
         <div id="choices">
-            <button id="choices choice-a"></button>
+            <button id="choice-a"></button>
             <br>
-            <button id="choices choice-b"></button>
+            <button id="choice-b"></button>
             <br>
-            <button id="choices choice-c"></button>
+            <button id="choice-c"></button>
             <br>
-            <button id="choices choice-d"></button>
+            <button id="choice-d"></button>
             <br>
         </div>
         <div id="score"></div>

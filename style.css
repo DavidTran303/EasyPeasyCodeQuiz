@@ -29,7 +29,15 @@ h1 {
   margin: 0 auto;
 }
 
-#start-btn {
+.start-quiz {
+  display: block;
+}
+
+.quiz-container {
+  display: none;
+}
+
+.start-btn {
   width: 12rem;
   height: 5rem;
   padding: 0;
@@ -38,18 +46,7 @@ h1 {
   text-align: center;
   color: red;
   background: yellow;
-  float: left;
-}
-
-#score-btn {
-  width: 12rem;
-  height: 5rem;
-  padding: 0;
-  margin-bottom: 1rem;
-  text-decoration: none;
-  text-align: center;
-  color: red;
-  background: blue;
+  display: block;
 }
 
 .btn {

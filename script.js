@@ -1,15 +1,16 @@
-const question = document.querySelector("#current-question");
+const question = document.querySelector("#question-number");
 const choice = Array.from(document.querySelectorAll(".choice-op"));
-const qText = document.querySelector("#qText");//questions
-const currentScore = document.querySelector("#currentScore");
-const timer = document.querySelector("#timer")
+const qText = document.querySelector("#current-question");
+const currentScore = document.querySelector("#score");
+const timeStart = document.querySelector("#timer")
 
 //important local variables
-let timer = 0
+let timerClock;
 let score = 0
 let currentQuestion = {}
 let correctAnswers = true
 let theQuestions = []
+let qArrayIndex =  0
 
 let questions = [
     {
@@ -43,17 +44,62 @@ let questions = [
     },
 
 ]
+let timer = (questions.length * 5) 
 
 const scorepoints = 100
 const maxquestions = 3
 const currentTime = 15 
 
-function startGame(){
-    timer++;
-    score = 0;
-    theQuestions = [...question];
-    nextQuestion();
+window.onload = function(){
+    
 }
+
+
+function startGame(){
+    document.getElementById("start-quiz").style.display = "none";
+    document.getElementById("quiz-container").style.display = "block";    
+    timerClock = setInterval(countDown, 1000);
+    score = 0;
+    nextQuestion();  
+}
+
+function nextQuestion(){
+    var currentQuestion = questions[qArrayIndex]
+       
+    var questionText = currentQuestion.question
+    var choiceA = currentQuestion.choice1
+    var choiceB = currentQuestion.choice2
+    var choiceC = currentQuestion.choice3
+    var choiceD = currentQuestion.choice4
+    var answer = currentQuestion.answer
+
+    
+    console.log(choiceA)
+    document.getElementById("current-question").innerHTML = questionText
+
+    document.querySelector("#choice-a").innerHTML = choiceA
+    document.getElementById("choice-b").innerHTML = choiceB
+    document.getElementById("choice-c").innerHTML = choiceC
+    document.getElementById("choice-d").innerHTML = choiceD
+     document.getElementById("score").innerHTML = score
+}
+
+function countDown(){
+    timer--;
+    console.log(timer);
+    document.getElementById("timer").innerText = timer
+    
+    if(timer <= 0){
+        quizStop();
+    }
+}
+
+function quizStop(){
+    clearInterval(timerClock) 
+
+}
+
+
 
 // function nextQuestion(){
 // if(theQuestions.length === 0 || )
