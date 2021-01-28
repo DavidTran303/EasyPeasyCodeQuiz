@@ -21,12 +21,43 @@ h1 {
   text-align: center;
 }
 
-.container {
+.quiz-container {
   width: 18rem;
   height: 18rem;
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  border-style: solid;
+  background-color: blue;
+  color: white;
+}
+.choices {
+  width: 100%;
+  border-style: solid;
+  color: red;
+}
+.choices:hover {
+  width: 50%;
+}
+
+.choice-a {
+  width: 100%;
+  color: red;
+}
+
+.question-number {
+  width: 100%;
+  border-style: solid;
+}
+
+.current-question {
+  border-style: solid;
+  widows: 100%;
+}
+
+.timer {
+  border-style: solid;
+  width: 100%;
 }
 
 .start-quiz {

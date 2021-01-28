@@ -1,8 +1,13 @@
 const question = document.querySelector("#question-number");
-const choice = Array.from(document.querySelectorAll(".choice-op"));
+const choice = Array.from(document.querySelectorAll("choices"));
 const qText = document.querySelector("#current-question");
 const currentScore = document.querySelector("#score");
 const timeStart = document.querySelector("#timer")
+
+
+//question 1 variable button for correct false
+var btn1 = document.getElementById("choice-a");
+
 
 //important local variables
 let timerClock;
@@ -44,6 +49,7 @@ let questions = [
     },
 
 ]
+
 let timer = (questions.length * 5) 
 
 const scorepoints = 100
@@ -73,16 +79,33 @@ function nextQuestion(){
     var choiceD = currentQuestion.choice4
     var answer = currentQuestion.answer
 
-    
-    console.log(choiceA)
     document.getElementById("current-question").innerHTML = questionText
 
+    document.querySelector("#choice-a").innerHTML = correctAnswers
     document.querySelector("#choice-a").innerHTML = choiceA
     document.getElementById("choice-b").innerHTML = choiceB
     document.getElementById("choice-c").innerHTML = choiceC
     document.getElementById("choice-d").innerHTML = choiceD
-     document.getElementById("score").innerHTML = score
+    document.getElementById("score").innerHTML = score
+
 }
+
+btn1.addEventListener("click", function(){
+        if(correctAnswers === true){
+            score++;
+            return;
+
+        }else(correctAnswers === false)
+        {
+            timer--;
+            score--;
+        }
+        console.log("button work?")
+ });
+        
+ 
+        
+
 
 function countDown(){
     timer--;
